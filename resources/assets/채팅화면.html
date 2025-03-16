@@ -15,28 +15,23 @@
         <div class="lnb">
             <header class="header">
                 <div class="container">
-                    <div class="btn-group">
-                        <button type="button" class="header-menu btn-nav-open" tabindex="0">
-                            <img src="img/ico/i-menu.svg" alt="메뉴">
-                        </button>
-                        <button type="button" class="btn-new-chat" tabindex="0">
-                            <img src="img/ico/i-new-chat.svg" alt="새로운 채팅">
-                        </button>
-                    </div>
+                    <button type="button" class="header-menu btn-nav-open" tabindex="0">
+                        <img src="img/ico/i-menu.svg" alt="메뉴">
+                    </button>
                     <a href="javasciprt:void(0);" class="header-logo" tabindex="0">
                         <img src="img/logo.svg" alt="로고" class="pc">
                         <img src="img/mo-logo.svg" alt="로고" class="mo">
                     </a>
+                    <button type="button" class="btn-new-chat" tabindex="0">
+                        <img src="img/ico/i-edit.svg" alt="새로운 채팅">
+                    </button>
                 </div>
             </header>
             <div class="nav-wrap">
                 <nav class="nav">
                     <div class="nav-top">
                         <button type="button" class="btn-nav-remove" tabindex="0">
-                            <img src="img/ico/i-menu.svg" alt="메뉴 닫기">
-                        </button>
-                        <button type="button" class="btn-new-chat" tabindex="0">
-                            <img src="img/ico/i-new-chat.svg" alt="새로운 채팅">
+                            <img src="img/ico/i-menu-close.svg" alt="메뉴 닫기">
                         </button>
                     </div>
                     <div class="nav-list">
@@ -81,165 +76,140 @@
                             </li>
                         </ul>
                         <ul class="navbar">
-                            <li class="nav-sub-item">
-                                <a href="javascipt:void(0);" class="nav-item" tabindex="0">
+                            <li>
+                                <a href="javascipt:void(0);" class="nav-item" tabindex="0" data-target="recent">
+                                    <img src="img/ico/i-bookmark.svg" alt="저장한 대화">
+                                    저장한 대화
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascipt:void(0);" class="nav-item" tabindex="0" data-target="history">
                                     <img src="img/ico/i-history.svg" alt="최근기록">
                                     최근기록
                                 </a>
-                                <ul class="nav-item-list history-list">
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="history-item">
-                                            <div class="item-top">
-                                                <p>2024 통계연보</p>
-                                                <div class="history-item-option">
-                                                    <button type="button" class="btn-op-open" tabindex="0">
-                                                        <img src="img/ico/i-dot.svg" alt="옵션">
-                                                    </button>
-                                                    <div class="item-option">
-                                                        <p>2024. 01. 01</p>
-                                                        <a href="javascript:void(0);">
-                                                            <img src="img/ico/i-trash.svg" alt="삭제">
-                                                            삭제
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
-                                                1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
-                                        </div>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
                 </nav>
+                <div class="nav-side">
+                    <div class="nav-side-top">
+                        <button type="button" class="btn-sidenav-remove" tabindex="0">
+                            <img src="img/ico/i-menu-close.svg" alt="메뉴 닫기">
+                        </button>
+                        <button type="button" class="btn-recent-edit" style="display: none;">
+                            <img src="img/ico/i-edit.svg" alt="편집">
+                            편집
+                        </button>
+                        <div class="check-group">
+                            <input type="checkbox" id="checkAll">
+                            <label for="checkAll"><span>0</span>개 선택됨</label>
+                        </div>
+                        <div class="recent-edit">
+                            <a href="javascipt:void(0);" class="btn-recent-delete">삭제</a>
+                            <a href="javascipt:void(0);" class="btn-recent-complete">완료</a>
+                        </div>
+                    </div>
+                    <div class="nav-side-content">
+                        <div class="nav-content" id="history">
+                            <ul class="nav-item-list history-list">
+                                <li>
+                                    <div class="history-item">
+                                        <div class="item-top">
+                                            <p>2024 통계연보</p>
+                                            <div class="history-item-option">
+                                                <button type="button" class="btn-op-open" tabindex="0">
+                                                    <img src="img/ico/i-dot.svg" alt="옵션">
+                                                </button>
+                                                <div class="item-option">
+                                                    <p>2024. 01. 01</p>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="img/ico/i-trash.svg" alt="삭제">
+                                                        삭제
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
+                                            1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="history-item">
+                                        <div class="item-top">
+                                            <p>2024 통계연보</p>
+                                            <div class="history-item-option">
+                                                <button type="button" class="btn-op-open" tabindex="0">
+                                                    <img src="img/ico/i-dot.svg" alt="옵션">
+                                                </button>
+                                                <div class="item-option">
+                                                    <p>2024. 01. 01</p>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="img/ico/i-trash.svg" alt="삭제">
+                                                        삭제
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
+                                            1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-content" id="recent">
+                            <ul class="nav-item-list history-list">
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="check01" class="item-check">
+                                        <label for="check01"></label>
+                                    </div>
+                                    <div class="history-item">
+                                        <div class="item-top">
+                                            <p>2024 통계연보 > 소(메뉴)</p>
+                                            <div class="history-item-option">
+                                                <div class="item-option">
+                                                    <p>2024. 01. 01</p>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="img/ico/i-trash.svg" alt="삭제">
+                                                        삭제
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
+                                            1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="check02" class="item-check">
+                                        <label for="check02"></label>
+                                    </div>
+                                    <div class="history-item">
+                                        <div class="item-top">
+                                            <p>2024 통계연보 > 소(메뉴)</p>
+                                            <div class="history-item-option">
+                                                <div class="item-option">
+                                                    <p>2024. 01. 01</p>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="img/ico/i-trash.svg" alt="삭제">
+                                                        삭제
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascipt:void(0);" class="history-text" tabindex="0">2024년 11월 한우
+                                            1+ 판정은 어떻게 되나요 ? 2024년 11월 한우 1+ 판정은 어떻게 되나요 ?</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <button type="button" class="btn-nav-reduction" tabindex="0">
+                <img src="img/ico/i-left.svg" alt="사이드바 접기 및 펼치기">
+            </button>
         </div>
         <main class="main">
             <section class="main-chat-wrap">
@@ -307,6 +277,12 @@
                                         <p>전체 통계 데이터는 <a href="javasciprt:void(0);">2024 통계연보</a>에서 확인하실 수 있습니다.</p>
                                     </div>
                                     <div class="chat-suggestion">
+                                        <h6>전역 검색조건을 설정해보세요 !</h6>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-gray open-modal" tabindex="0" data-modal-id="searchConditionChangeModal">검색조건 변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="chat-suggestion">
                                         <h6>다음으로 이런걸 물어볼 수 있어요</h6>
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-outline-primary" tabindex="0">24년 11월
@@ -320,12 +296,7 @@
                                                 젖소의 수를 알려줘 !</button>
                                         </div>
                                     </div>
-                                    <div class="chat-suggestion">
-                                        <h6>전역 검색조건을 설정해보세요 !</h6>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-gray" tabindex="0">전역 검색조건설정</button>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </li>
                             <li class="chat-item">
@@ -401,7 +372,7 @@
                         <div class="container">
                             <div class="search-group">
                                 <label for="search-input" class="label-hidden">검색</label>
-                                <input type="text" placeholder="궁금한 것을 무엇이든 물어보세요" id="search-input" tabindex="0">
+                                <textarea placeholder="궁금한 것을 무엇이든 물어보세요" id="search-input" tabindex="0"></textarea>
                                 <button type="submit" class="btn-search" tabindex="0">
                                     <img src="img/ico/i-search.svg" alt="검색">
                                 </button>
@@ -413,6 +384,52 @@
         </main>
     </div>
 
+    <!-- S : searchConditionChangeModal :: 검색조건 변경 -->
+    <div id="searchConditionChangeModal" class="modal-wrap">
+        <div class="modal-inner">
+            <div class="modal-content modal-lg" tabindex="0">
+                <div class="modal-header">
+                    <h2 class="modal-title">검색조건 변경</h2>
+                    <button type="button" class="btn-modal-close">
+                        <img src="img/ico/i-close.svg" alt="닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>입력 키워드 ["2024","11월","한우","1+"]</p>
+                    <div class="input-wrap">
+                        <div class="select-group">
+                            <label for="year">연도</label>
+                            <select name="" id="year" title="연도 선택">
+                                <option value="선택">선택</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <label for="month">월</label>
+                            <select name="" id="month" title="월 선택">
+                                <option value="선택">선택</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <label for="breed">품종</label>
+                            <select name="" id="breed" title="품종 선택">
+                                <option value="선택">선택</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <label for="rating">등급</label>
+                            <select name="" id="rating" title="등급 선택">
+                                <option value="선택">선택</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-md btn-primary btn-modal-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : joinModal -->
     <script src="lib/jquery.min.js"></script>
     <script src="js/common.js"></script>
 </body>

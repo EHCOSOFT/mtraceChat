@@ -8,19 +8,10 @@ $(document).ready(function () {
     }
     else {
         // 💻 **PC 이벤트 (클릭)**
-        $(".btn-nav-open").click(function () {
-            let lnb = $(".lnb");
 
-            if (lnb.hasClass("hidden")) {
-                lnb.removeClass("hidden").animate({ left: "0px" }, 1000);
-            } else {
-                lnb.animate({ left: "-300px" }, 300, function () {
-                    lnb.addClass("hidden");
-                });
-            }
-        });
     }
 
+    // 모바일 메뉴 열기
     function openNav() {
         $(".nav-wrap").fadeIn(200, function () {
             setTimeout(() => {
@@ -29,11 +20,100 @@ $(document).ready(function () {
         });
     }
 
+    // 모바일 메뉴 닫기
     function closeNav() {
-        $(".nav").animate({ left: "-300px" }, 300, function () {
+        $(".nav").animate({ left: "-50%" }, 300, function () {
             $(".nav-wrap").fadeOut(200);
         });
+        $(".nav-side").removeClass('show');
     }
+
+    // 모바일 메뉴 사이드바 열기/닫기
+    function toggleSideNav(section) {
+        if (section) {
+            $(".nav-side").addClass("show");
+            $(".nav-content").removeClass("active").hide();
+            $("#" + section).addClass("active").show();
+            checkRecentActive();
+        } else {
+            closeSideNav();
+        }
+    }
+
+    // 모바일
+    function closeSideNav() {
+        $(".nav-side").removeClass("show");
+        $(".nav-content").removeClass("active").hide();
+
+        // 내부 컨텐츠
+        $(".btn-recent-edit").removeClass("show");
+        $(".recent-edit").removeClass("show");
+        $(".nav-side-top .check-group").removeClass("show");
+        $(".history-list > li > .check-group").removeClass("show");
+    }
+
+    $(".btn-nav-open").click(openNav);
+    $(".btn-nav-remove").click(closeNav);
+    $(".btn-sidenav-remove").click(closeSideNav);
+
+    $(".nav-item").click(function (e) {
+        e.preventDefault();
+        let section = $(this).data("target");
+        toggleSideNav(section);
+    });
+
+    function checkRecentActive() {
+        if ($('#recent').hasClass('active')) {
+            $('.btn-recent-edit').show();
+        } else {
+            $('.btn-recent-edit').hide();
+            $(".recent-edit").removeClass("show");
+            $(".nav-side-top .check-group").removeClass("show");
+            $(".history-list > li > .check-group").removeClass("show");
+        }
+    }
+
+    $(".nav-content").on('classChange', function () {
+        checkRecentActive();
+    });
+
+    $(".btn-recent-edit").click(function () {
+        $(this).hide();
+        $(".btn-sidenav-remove").hide();
+        $(".recent-edit").addClass("show");
+        $(".nav-side-top .check-group").addClass("show");
+        $(".history-list > li > .check-group").addClass("show");
+    });
+
+    $(".btn-recent-complete").click(function () {
+        $(".btn-sidenav-remove").addClass("show").show();
+        $(".btn-recent-edit").addClass("show").show();
+        $(".recent-edit").removeClass("show");
+        $(".nav-side-top .check-group").removeClass("show");
+        $(".history-list > li > .check-group").removeClass("show");
+    });
+
+    $("#checkAll").change(function () {
+        let isChecked = $(this).prop("checked");
+        $(".item-check").prop("checked", isChecked);
+        updateSelectedCount();
+    });
+
+    $(".item-check").change(updateSelectedCount);
+
+    function updateSelectedCount() {
+        let count = $(".item-check:checked").length;
+        $(".nav-side-top .check-group label span").text(count);
+    }
+
+    $(".btn-recent-delete").click(function () {
+        $(".item-check:checked").closest("li").remove();
+        updateSelectedCount();
+    });
+
+    $(".btn-nav-reduction").click(function () {
+        $(".lnb").toggleClass("active");
+    });
 
     function openOptionMenu(event) {
         event.stopPropagation(); // 이벤트 버블링 방지
@@ -75,6 +155,7 @@ $(document).ready(function () {
         parentLi.closest(".nav-sub-item").addClass("active");
     }
 
+    // 키보드 접근성 (키보드 네비게이션 지원)
     function handleFocusMainMenu() {
         let parentLi = $(this).parent();
 
@@ -86,6 +167,7 @@ $(document).ready(function () {
         }
     }
 
+    // 키보드 접근성 (키보드 네비게이션 지원)
     function handleFocusSubMenu() {
         let parentLi = $(this).parent();
         let parentList = parentLi.closest(".nav-item-list");
