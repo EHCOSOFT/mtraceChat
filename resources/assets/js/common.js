@@ -8,7 +8,6 @@ $(document).ready(function () {
     }
     else {
         // 💻 **PC 이벤트 (클릭)**
-
     }
 
     // 모바일 메뉴 열기
@@ -18,6 +17,7 @@ $(document).ready(function () {
                 $(".nav").animate({ left: "0px" }, 300);
             }, 100);
         });
+        $("body").css("overflow", "hidden"); // 스크롤 막기
     }
 
     // 모바일 메뉴 닫기
@@ -26,6 +26,7 @@ $(document).ready(function () {
             $(".nav-wrap").fadeOut(200);
         });
         $(".nav-side").removeClass('show');
+        $("body").css("overflow", "auto"); // 스크롤 다시 활성화
     }
 
     // 모바일 메뉴 사이드바 열기/닫기
