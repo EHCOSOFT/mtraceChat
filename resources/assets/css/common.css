@@ -870,9 +870,30 @@ main {
         align-items: center;
     }
 
-    .lnb.active .navbar>li>a {
-        font-size: 0;
+    .lnb.active .navbar>li>a,
+    .lnb.active .nav-item-list>li>a {
+        position: relative;
         width: 44px;
+    }
+
+    .lnb.active .navbar>li>a span,
+    .lnb.active .nav-item-list>li>a span {
+        background: var(--color-2e2e2e-black);
+        border-radius: var(--radius-4-xs);
+        color: var(--color-ffffff-white);
+        display: none;
+        font-size: var(--font-14-xs);
+        position: absolute;
+        padding: var(--space-4-min) var(--space-12-xs);
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 100%;
+        width: max-content;
+    }
+
+    .lnb.active .navbar>li>a:hover span,
+    .lnb.active .nav-item-list>li>a:hover span {
+        display: inline-block;
     }
 
     .lnb.active .header .btn-new-chat {
@@ -1413,6 +1434,7 @@ main {
     outline: 2px dashed var(--color-2948a8-primary);
     outline-offset: 0px;
 }
+
 /* **************************************** *
  * MODAL
  * **************************************** */
