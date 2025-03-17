@@ -6,28 +6,44 @@ $(document).ready(function () {
         $(".btn-nav-remove").click(closeNav);
         $(".btn-nav-open").click(openNav);
     }
-    else {
-        // 💻 **PC 이벤트 (클릭)**
-    }
+    // else {
+    //     // 💻 **PC 이벤트 (클릭)**
+    // }
 
     // 모바일 메뉴 열기
     function openNav() {
-        $(".nav-wrap").fadeIn(200, function () {
-            setTimeout(() => {
-                $(".nav").animate({ left: "0px" }, 300);
-            }, 100);
-        });
-        $("body").css("overflow", "hidden"); // 스크롤 막기
+        if ($(window).width() > 992) return; // PC 환경에서는 실행 안되게 처리
+
+        if (!$(".nav").hasClass("animated")) {
+            $(".nav").addClass("animated");
+            $(".nav-wrap").fadeIn(200, function () {
+                setTimeout(() => {
+                    $(".nav").animate({ left: "0px" }, 300);
+                }, 100);
+                setTimeout(() => {
+                    $(".btn-nav-remove").fadeIn(200);
+                }, 300); // 300ms 지연 후 버튼 표시
+            });
+            $("body").css("overflow", "hidden"); // 스크롤 막기
+        }
     }
 
     // 모바일 메뉴 닫기
     function closeNav() {
+        if ($(window).width() > 992) return; // PC 환경에서는 실행 안되게 처리
+
         $(".nav").animate({ left: "-50%" }, 300, function () {
             $(".nav-wrap").fadeOut(200);
+            $(".nav").removeClass("animated");
         });
         $(".nav-side").removeClass('show');
         $("body").css("overflow", "auto"); // 스크롤 다시 활성화
+        $(".btn-nav-remove").fadeOut(200); // 닫을 때 버튼 숨김
+
+        // 모든 active 클래스 초기화
+        $(".navbar > li, .nav-item-list, .lnb, .nav-sub-item").removeClass("active");
     }
+
 
     // 모바일 메뉴 사이드바 열기/닫기
     function toggleSideNav(section) {
@@ -112,9 +128,17 @@ $(document).ready(function () {
         updateSelectedCount();
     });
 
+    // 사이드바 접기/펼치기 버튼
     $(".btn-nav-reduction").click(function () {
-        $(".lnb").toggleClass("active");
+        if ($(".lnb").hasClass("active")) {
+            $(".lnb").removeClass("active");
+        } else {
+            $(".lnb").addClass("active");
+            $(".nav-sub-item").removeClass("active");
+        }
     });
+
+
 
     function openOptionMenu(event) {
         event.stopPropagation(); // 이벤트 버블링 방지
@@ -135,6 +159,11 @@ $(document).ready(function () {
         e.preventDefault();
         let parentLi = $(this).parent();
 
+        // .lnb.active가 있으면 .active 제거
+        if ($(".lnb").hasClass("active")) {
+            $(".lnb").removeClass("active");
+        }
+
         if (parentLi.hasClass("active")) {
             parentLi.removeClass("active");
             parentLi.find(".nav-item-list").removeClass("active");
@@ -143,6 +172,7 @@ $(document).ready(function () {
             parentLi.addClass("active");
             parentLi.find(".nav-item-list").addClass("active");
         }
+
     }
 
     function toggleSubMenu(e) {
@@ -154,6 +184,7 @@ $(document).ready(function () {
         parentLi.addClass("active");
         parentList.addClass("active");
         parentLi.closest(".nav-sub-item").addClass("active");
+
     }
 
     // 키보드 접근성 (키보드 네비게이션 지원)
