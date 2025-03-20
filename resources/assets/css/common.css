@@ -199,6 +199,10 @@ select {
     letter-spacing: var(--letter-spacing);
 }
 
+button:disabled {
+    opacity: 0.2;
+}
+
 input:hover {
     outline: none;
 }
@@ -544,7 +548,7 @@ main {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     max-width: 100%;
 }
@@ -555,9 +559,9 @@ main {
     display: flex;
     justify-content: center;
     left: var(--bs-gutter-x);
-    /* position: absolute;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
 }
 
 .header .btn-new-chat {}
@@ -569,6 +573,10 @@ main {
 .header .header-logo {
     align-items: center;
     display: flex;
+}
+
+.header .header-logo .active {
+    display: none;
 }
 
 @media (min-width:768px) {}
@@ -865,6 +873,14 @@ main {
 @media (min-width:992px) {
     .lnb.active {
         width: 68px;
+    }
+    
+    .lnb.active .header-logo .active {
+        display: block;
+    }
+
+    .lnb.active .header-logo .normal {
+        display: none;
     }
 
     .lnb.active .navbar {
@@ -1406,6 +1422,11 @@ main {
     text-align: left;
 }
 
+.select-group label span {
+    color: var(--color-b10025-red);
+    margin: 0 0 0 2px;
+}
+
 .select-group select {
     background: var(--color-ffffff-white) url('../img/ico/i-down.svg') no-repeat 50%/24px auto;
     background-position: right 12px center;
@@ -1434,6 +1455,10 @@ main {
 .select-group select:focus {
     outline: 2px dashed var(--color-2948a8-primary);
     outline-offset: 0px;
+}
+
+.select-group.error select {
+    border-color: var(--color-b10025-red);
 }
 
 /* **************************************** *
@@ -1574,4 +1599,39 @@ main {
 
 .modal-xl {
     width: 900px;
+}
+
+/* **************************************** *
+ * depth 
+ * **************************************** */
+.depth-group {
+    align-items: center;
+    display: flex;
+}
+
+.depth-group li {
+    align-items: center;
+    color: var(--color-2e2e2e-black);
+    display: flex;
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-500-medium);
+}
+
+.depth-group li img {
+    height: var(--ico-16-md);
+    margin: 0 2px 0 0;
+    width: var(--ico-16-md);
+}
+
+.depth-group li::after {
+    background: url(../img/ico/i-right.svg);
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: var(--ico-16-md);
+    width: var(--ico-16-md);
+}
+
+.depth-group li:last-child::after {
+    display: none;
 }
