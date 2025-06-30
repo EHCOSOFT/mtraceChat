@@ -90,13 +90,13 @@
     --font-title-18-xs: 18px;
 
     /* 폰트사이즈 : 최종 버전으로 추후 변수명의 숫자 일괄 삭제 */
-    --font-20-xl: 20px;
-    --font-18-lg: 18px;
-    --font-16-md: 16px;
-    --font-15-sm: 15px;
-    --font-14-xs: 14px;
-    --font-13-xxs: 13px;
-    --font-12-min: 12px;
+    --font-20-xl: 22px;
+    --font-18-lg: 20px;
+    --font-16-md: 18px;
+    --font-15-sm: 17px;
+    --font-14-xs: 16px;
+    --font-13-xxs: 15px;
+    --font-12-min: 14px;
 
     /* 폰트두께 : 최종 버전으로 추후 변수명의 숫자 일괄 삭제 */
     --font-800-extrabold: 800;
@@ -111,13 +111,13 @@
     --space-80-fivexl: 80px;
     --space-60-fourxl: 60px;
     --space-48-threexl: 48px;
-    --space-40-xxl: 40px;
-    --space-32-xl: 32px;
-    --space-24-lg: 24px;
-    --space-20-md: 20px;
-    --space-16-sm: 16px;
+    --space-40-xxl: 44px;
+    --space-32-xl: 34px;
+    --space-24-lg: 26px;
+    --space-20-md: 22px;
+    --space-16-sm: 18px;
     --space-12-xs: 12px;
-    --space-8-xxs: 8px;
+    --space-8-xxs: 10px;
     --space-4-min: 4px;
 
     /* 모서리지름 : 최종 버전으로 추후 변수명의 숫자 일괄 삭제 */
@@ -131,10 +131,10 @@
     --radius-4-xs: 4px;
 
     /* 아이콘 : 최종 버전으로 추후 변수명의 숫자 일괄 삭제 */
-    --ico-24-xl: 24px;
-    --ico-20-lg: 20px;
-    --ico-16-md: 16px;
-    --ico-12-sm: 12px;
+    --ico-24-xl: 26px;
+    --ico-20-lg: 22px;
+    --ico-16-md: 18px;
+    --ico-12-sm: 14px;
 }
 
 @media (min-width:992px) {
@@ -592,11 +592,11 @@ main {
         position: relative;
         top: 0;
         transition: left 1s ease;
-        width: 200px;
+        width: 240px;
     }
 
     .lnb.hidden {
-        left: -300px;
+        left: -240px;
         height: 100vh;
         position: absolute;
         transition: left 1s ease;
@@ -733,7 +733,7 @@ main {
     font-size: var(--font-14-xs);
     font-weight: var(--font-500-medium);
     display: flex;
-    height: 40px;
+    height: 48px;
     gap: var(--space-8-xxs);
     padding: var(--space-12-xs) var(--space-8-xxs);
     width: 100%;
@@ -874,7 +874,7 @@ main {
     .lnb.active {
         width: 68px;
     }
-    
+
     .lnb.active .header-logo .active {
         display: block;
     }
@@ -1143,7 +1143,7 @@ main {
     .nav-side {
         border-right: 1px solid var(--color-E8E8E8-line);
         height: 100vh;
-        left: 200px;
+        left: 240px;
         position: absolute;
         top: -60px;
         width: 240px;
