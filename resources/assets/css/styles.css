@@ -594,6 +594,7 @@
     }
 
     .chat .container {
+
         min-height: calc(100% - 248px);
     }
 
@@ -869,4 +870,92 @@
     .main-question-list ul li {
         width: calc((100% - var(--space-8-xxs)) / 2);
     }
+}
+
+.chat-percent {
+    background: var(--color-ffffff-white);
+    border: 1px solid var(--color-E8E8E8-line);
+    border-radius: var(--radius-12-md);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+    max-width: 400px;
+    padding: var(--space-16-sm);
+}
+
+.chat-percent h4 {
+    align-items: center;
+    color: var(--color-2e2e2e-black);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-600-semibold);
+    display: flex;
+    gap: var(--space-8-xxs);
+}
+
+.chat-percent ul {
+    display: flex;
+    gap: var(--space-8-xxs);
+}
+
+.chat-percent ul li {
+    align-items: flex-start;
+    background: #F7F9FB;
+    border-radius: var(--radius-12-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4-min);
+    padding: var(--space-16-sm) !important;
+}
+
+.chat-percent ul li span {
+    color: var(--color-464555-darkgray);
+    font-size: var(--font-12-min);
+}
+
+.chat-percent ul li h3 {
+    color: var(--color-2948a8-primary);
+    font-size: var(--font-16-md);
+}
+
+.chat-percent ul li:last-child h3 {
+    color: var(--color-b10025-red);
+}
+
+@media (min-width: 992px) {
+    .chat-percent h4 {
+        font-size: var(--font-18-lg);
+        line-height: 26px;
+    }
+}
+
+.bg-point {
+    background: linear-gradient(144deg, rgba(232, 232, 232, 0.05) 8%, rgba(41, 72, 168, 0.05) 97.86%);
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+.chat-info {
+    background: var(--color-ffffff-white);
+    border: 1px solid var(--color-b10025-red);
+    border-radius: var(--radius-12-md);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+    padding: var(--space-16-sm);
+}
+
+.chat-info h5 {
+    color: var(--color-2e2e2e-black);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-500-medium);
+    line-height: 24px;
+}
+
+.chat-info h5 a {
+    color: var(--color-b10025-red);
+    text-decoration: underline;
 }
