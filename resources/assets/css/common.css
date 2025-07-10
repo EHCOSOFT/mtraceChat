@@ -1243,11 +1243,12 @@ main {
  * accordion
  * **************************************** */
 .accordion {
+    background: var(--color-ffffff-white);
     border: 1px solid var(--color-E8E8E8-line);
     border-radius: var(--radius-12-md);
     overflow: hidden;
-    max-width: 400px;
-    padding: var(--space-12-xs) var(--space-16-sm);
+    max-width: 600px;
+    padding: var(--space-20-md) var(--space-20-md);
     width: 100%;
 }
 
@@ -1261,7 +1262,7 @@ main {
     align-items: center;
     background: none;
     color: var(--color-2e2e2e-black);
-    font-size: var(--font-13-xxs);
+    font-size: var(--font-15-sm);
     font-weight: var(--font-500-medium);
     display: flex;
     gap: var(--space-8-xxs);
@@ -1272,6 +1273,11 @@ main {
     margin: 0 0 0 auto;
     transition: transform 0.3s ease;
     transform: rotate(180deg);
+}
+
+.accordion-header img {
+    height: 24px;
+    width: 24px;
 }
 
 .accordion-content {
@@ -1294,16 +1300,21 @@ main {
 
 .accordion-content ul li {
     align-items: center;
-    border: 0;
+    border-bottom: 1px solid var(--color-E8E8E8-line) !important;
     color: var(--color-767586-gray);
-    font-size: var(--font-13-xxs);
+    font-size: var(--font-15-sm);
     font-weight: var(--font-400-regular);
     display: flex;
     gap: var(--space-8-xxs);
-    padding: 0;
+    padding: var(--space-8-xxs) 0 !important;
+}
+
+.accordion-content ul li img {
+    height: 20px;
 }
 
 .accordion-content ul li:last-child {
+    border-bottom: 0 !important;
     color: var(--color-2948a8-primary);
 }
 
